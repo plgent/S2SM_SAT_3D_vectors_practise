@@ -1,0 +1,116 @@
+\question % 2009 Exam, Q9.
+Consider parallelogram $ABCD$, where $\vv{AB} = \vec{a}$ and $\vv{BC} = \vec{b}$, as shown in Figure~\ref{fig:parallelogram-in-three-dimensional-space}. Point $X$ divides $DB$ internally in the ratio $2 : 1$. Point $M$ is the midpoint of $AB$.
+
+\begin{figure}[h]
+    \centering
+    \tdplotsetmaincoords{165}{15}
+    \begin{tikzpicture}[scale=1.2,tdplot_main_coords]
+    \coordinate (A) at (0,0,0);
+    \coordinate (B) at (4,2,-3);
+    \coordinate (C) at (3,4,-1);
+    \coordinate (D) at (-1,2,2);
+    \coordinate (M) at (2,1,-1.5);
+    \coordinate (X) at (2.33,2,-1.33);
+    \ifprintanswers
+    \draw[semithick] (A) -- (B);
+    \draw[semithick] (A) -- (D) -- (X);
+    \draw[vector,red] (B) -- node[midway,right]{$\vec{b}$} (C);
+    \draw[vector,red] (D) -- node[midway,below]{$\vec{a}$} (C);
+    \draw[vector,gray] (X) -- node[midway,left,xshift=-2pt]{$\vv{XM}$} (M);
+    \draw[vector,gray] (X) -- node[midway,below]{$\vv{XB}$} (B);
+    \draw[vector,gray] (C) -- node[midway,left,xshift=-2pt]{$\vv{CX}$} (X);
+    \fill (X) circle (1.5pt) node[anchor=north east]{$X$};
+    \else
+    \draw[semithick] (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw[semithick] (D) -- (B);
+    \fill (X) circle (1.5pt) node[anchor=north]{$X$};
+    \fi
+    \fill (A) circle (1.5pt) node[anchor=south]{$A$};
+    \fill (B) circle (1.5pt) node[anchor=west]{$B$};
+    \fill (C) circle (1.5pt) node[anchor=north]{$C$};
+    \fill (D) circle (1.5pt) node[anchor=east]{$D$};
+    \fill (M) circle (1.5pt) node[anchor=south]{$M$};
+    \end{tikzpicture}
+    \caption{A parallelogram in three-dimensional space.}
+    \label{fig:parallelogram-in-three-dimensional-space}
+\end{figure}
+
+\begin{parts}
+
+\part[2]
+Show that $\displaystyle{\vv{DX} = \frac{2}{3}\vec{a} - \frac{2}{3}\vec{b}}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+Since $\vv{DB} = \vec{a} - \vec{b}$ there is
+\begin{align*}
+    \vv{DX} &= \frac{2}{3}\vv{DB} \\
+    &= \frac{2}{3}(\vec{a} - \vec{b}) \\
+    &= \frac{2}{3}\vec{a} - \frac{2}{3}\vec{b}.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[1]
+Find $\vv{CX}$ in terms of $\vec{a}$ and $\vec{b}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+We have
+\begin{align*}
+    \vv{CX} &= -\vv{DC} + \vv{DX} \\
+    &= -\vec{a} + \frac{2}{3}\vec{a} - \frac{2}{3}\vec{b} && (\textrm{by (a)}) \\
+    &= -\frac{1}{3}\vec{a} - \frac{2}{3}\vec{b}.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[3]
+Give a vector proof that points $C$, $X$ and $M$ are collinear.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2.5in]
+\begin{proof}
+Note that
+\begin{align*}
+    \vv{XM} &= \frac{1}{3}\vv{DB} - \frac{1}{2}\vv{AB} \\
+    &= \frac{1}{3}\vec{a} - \frac{1}{3}\vec{b} - \frac{1}{2}\vec{a} \\
+    &= -\frac{1}{6}\vec{a} - \frac{2}{6}\vec{b} \\
+    &= \frac{1}{2}\vv{CX}.
+\end{align*}
+It follows that $C$, $X$ and $M$ are collinear.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[4]
+If $\vec{a} = \colvec{3}{4}{2}{-3}$ and $\vec{b} = \colvec{3}{-1}{2}{2}$, find the area of triangle $MXB$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3.5in]
+By parts (a) and (b)
+\begin{align*}
+    \vv{XB} &= \frac{1}{3}\vec{a} - \frac{1}{3}\vec{b} & \vv{XM} &= -\frac{1}{6}\vec{a} - \frac{2}{6}\vec{b} \\
+    &= \colvec{3}{\frac{4}{3}}{\frac{2}{3}}{-\frac{3}{3}} - \colvec{3}{-\frac{1}{3}}{\frac{2}{3}}{\frac{2}{3}} & &= \colvec{3}{-\frac{4}{6}}{-\frac{2}{6}}{\frac{3}{6}} - \colvec{3}{-\frac{2}{6}}{\frac{4}{6}}{\frac{4}{6}} \\
+    &= \colvec{3}{\frac{5}{3}}{0}{-\frac{5}{3}}, & &= \colvec{3}{-\frac{1}{3}}{-1}{-\frac{1}{6}}.
+\end{align*}
+Note that
+\begin{align*}
+    \vv{XB} \times \vv{XM} &=
+    \begin{vmatrix}
+        \vec{i} & \vec{j} & \vec{k} \\
+        \sfrac{5}{3} & 0 & -\sfrac{5}{3} \\
+        -\sfrac{1}{3} & -1 & -\sfrac{1}{6} \\
+    \end{vmatrix} \\
+    &= \colvec{3}{-\frac{5}{3}}{-\frac{5}{6}}{-\frac{5}{3}}.
+\end{align*}
+So,
+\begin{align*}
+    \textrm{area}(\triangle{MXB}) &= \frac{1}{2}\abs{\vv{XB} \times \vv{XM}} \\
+    &= \frac{1}{2}\sqrt{\frac{25}{9} + \frac{25}{36} + \frac{25}{9}} \\
+    &= \frac{15}{12} \, \textrm{units}^2.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

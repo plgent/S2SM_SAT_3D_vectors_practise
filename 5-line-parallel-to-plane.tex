@@ -1,0 +1,72 @@
+\question % 2007 Exam, Q4.
+
+\begin{parts}
+
+\part[2]
+Prove that if the line
+\[
+	\frac{x - k}{a} = \frac{y - \ell}{b} = \frac{z - m}{c}
+\]
+is parallel to the plane $Ax + By + Cz = D$, then $Aa + Bb + Cc = 0$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+A direction vector and a normal vector for the line and the plane are
+\[
+    \vec{v} = \colvec{3}{a}{b}{c}, \qquad \vec{n} = \colvec{3}{A}{B}{C}.
+\]
+Since $\vec{n} \cdot \vec{v} = 0$ there is
+\begin{align*}
+	\colvec{3}{A}{B}{C} \cdot \colvec{3}{a}{b}{c} &= 0 \\
+	Aa + Bb + Cc &= 0.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part
+For the line
+\[
+	\frac{x - 3}{3} = \frac{y + 4}{4} = \frac{z - m}{c}
+\]
+and the plane $2x - y + z = 18$:
+\begin{subparts}
+
+\subpart[2]
+Find $c$ if the line is parallel to the plane.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+From (a)
+\begin{align*}
+	2 \times 3 + (-1) \times 4 + 1 \times c &= 0 \\
+	6 - 4 + c &= 0 \\
+	c &= -2.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[3]
+Find $m$ if the line is in the plane.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+Let $t$ be a real number such that
+\[
+	\frac{x - 3}{3} = \frac{y + 4}{4} = \frac{z - m}{-2} = t.
+\]
+Then
+\[
+	x = 3 + 3t, \qquad y = - 4 + 4t, \qquad z = m - 2t.
+\]
+These meet the plane at
+\begin{align*}
+	2(3 + 3t) - (-4 + 4t) + (m - 2t) &= 18 \\
+	10 + m &= 18 \\
+	m &= 8.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{subparts}
+
+\end{parts}

@@ -1,0 +1,163 @@
+%%% Surplus questions
+
+%%% 2004, Q13 is excellent.
+%%% 2005, Q11 is too.
+%%% Sample 1, Q3.
+%%% Studies 2007, Q5.
+%%% Studies 2015, Q9.
+
+\question % 2017 Exam, Q12.
+Consider the system of equations:
+\[
+	\systeme{
+		x + 2y + 2z = 4,
+		2x + y - 2z = 5,
+		3x + 2y - 2z = 8
+	}
+\]
+
+\begin{parts}
+
+\part[1]
+Write this system as an augmented matrix.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[3]
+Stating all row operations, show that the system has the solutions
+\begin{align*}
+	x &= 2 + 2t \\
+	y &= 1 - 2t \\
+	z &= t,
+\end{align*}
+where $t$ is a real number.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+% \uplevel{Let $P_1$, $P_2$ and $P_3$ be the three planes given by
+% \[
+% 	\sysdelim.. \systemeL{
+% 		x + 2y + 2z = 4 @ P_1 :,
+% 		2x + y - 2z = 5 @ P_2 :,
+% 		3x + 2y - 2z = 8 @ P_3 :
+% 	}
+% \]
+% }
+
+\part[1]
+Using part (b), show that $A(2, 1, 0)$ and $B(0, 3, -1)$ are common to all three planes.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[3]
+Show that $P_1$ and $P_2$ are perpendicular.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\uplevel{The point $C(0, 6, 2)$ is on $P_3$ and $D(12, -4, 0)$ is on $P_1$. The line $\ell$ through $C$ and $D$ intersects $P_2$ at $E$, as shown in Figure~\ref{fig-three-planes}.}
+
+\begin{figure}[h]
+	\centering
+% 	\includegraphics[scale=.5]{0-three-planes}
+	\caption{Three planes.}
+	\label{fig-three-planes}
+\end{figure}
+
+\part[2]
+Find the equation of $\ell$ in parametric form.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Find the coordinates of $E$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Find the distance from $E$ to $P_1$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\uplevel{The equations of $P_1$ and $P_2$ are used to model two hillsides that meet at a river, as shown in Figure~\ref{fig-three-planes-modelling}. The river is modelled by the line where the two planes meet. A straight bridge, modelled by $\ell$ connects $C$ to $D$.}
+
+\begin{figure}[h]
+	\centering
+% 	\includegraphics[scale=.5]{0-three-planes-modelling}
+	\caption{A model.}
+	\label{fig-three-planes-modelling}
+\end{figure}
+
+\part[2]
+The point $E$ on the bridge must be at least $1$~unit from $P_1$ and at least $1$~unit from $P_3$. Show whether or not the model satisfies the conditions.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[3in]
+Foo.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}
+
+\triast
+
+\question % 2014 Exam, Q10.
+Foo.
+
+\begin{figure}[h]
+    \centering
+    \tdplotsetmaincoords{50}{195}
+    \begin{tikzpicture}[scale=1,tdplot_main_coords]
+    \coordinate (A) at (4,1,-2);
+    \coordinate (B) at (6,3,0);
+    \coordinate (C) at (8,-1,2);
+    \draw[semithick,->] (0,0,0) -- (10,0,0) node[anchor=north east]{$X$};
+    \draw[semithick,->] (0,0,0) -- (0,6,0) node[anchor=north west]{$Y$};
+    \draw[semithick,->] (0,0,0) -- (0,0,5) node[anchor=south]{$Z$};
+    \draw[semithick,dashed] (0,0,0) -- (-7,0,0);
+    \draw[semithick,dashed] (0,0,0) -- (0,-7,0);
+    \draw[semithick,dashed] (0,0,0) -- (0,0,-3);
+    \fill (A) circle (2pt) node[anchor=north]{$A$};
+    \fill (B) circle (2pt) node[anchor=north]{$B$};
+    \fill (C) circle (2pt) node[anchor=south]{$C$};
+    % \def\x{.5}
+    % \draw[thin] (0,0,0) -- ({1.2*\x},{sqrt(3)*1.2*\x},0) node[below] {$y=\sqrt{3}x$};
+    % \filldraw[
+    %     draw=red,%
+    %     fill=red!20,%
+    % ]          (0,0,0)
+    %         -- (\x,{sqrt(3)*\x},0)
+    %         -- (\x,{sqrt(3)*\x},1)
+    %         -- (0,0,1)
+    %         -- cycle;
+    \end{tikzpicture}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}

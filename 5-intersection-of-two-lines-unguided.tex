@@ -1,0 +1,43 @@
+\question[4] % 2003 Exam, Q3.
+Find the point of intersection $P$ of the two lines
+\[
+    \ell_1 :
+    \begin{cases}
+        x = 2 + t \\
+        y = 2t \\
+        z = 1 - t
+    \end{cases}
+    \qquad
+    \ell_2 : \frac{x - 3}{2} = \frac{y + 1}{3} = \frac{z - 3}{-1}
+\]
+where $t$ is a real number.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.75in]
+Direction vectors are
+\[
+    \vec{d}_1 = \colvec{3}{1}{2}{-1}, \qquad \vec{d}_2 = \colvec{3}{2}{3}{-1}.
+\]
+Let $k$ be a real number. The lines aren't parallel as
+\[
+    \vec{d}_1 \neq k\vec{d}_2.
+\]
+For real numbers $s$ and $t$
+\[
+	\ell_1 :
+	\begin{cases}
+		x(t) = 2 + t \\
+		y(t) = 2t \\
+		z(t) = 1 - t
+	\end{cases}
+	\qquad
+	\ell_2 :
+	\begin{cases}
+		x(s) = 3 + 2s \\
+		y(s) = -1 + 3s \\
+		z(s) = 3 - s
+	\end{cases}.
+\]
+From the $x$-values, $t = 2s + 1$, so $s = -3$ and $t = -5$. Thus, $P(-3, -10, 6)$.
+\end{solutionorgrid}
+\end{EnvFullwidth}

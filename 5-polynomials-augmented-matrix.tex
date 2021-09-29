@@ -1,0 +1,150 @@
+\question % Sample Questions 2, Q7.
+Let $k$, $a$, $b$ and $c$ be real numbers. Consider the polynomial
+\[
+    P(x) = (x + 2)(kx^3 + ax^2 + bx + c) + (-7x + 22).
+\]
+It's known that $x + 1$ is a factor and $x = 2$ is a zero of $P(x)$. Moreover, when $P(x)$ is divided by $x - 3$, the remainder is $56$.
+
+\begin{parts}
+
+\part[3]
+Show that an augmented matrix for the coefficients $a$, $b$ and $c$ can be written as
+\[
+	\begin{amatrix}{3}
+        1 & -1 & 1 & k - 29 \\
+        4 & 2 & 1 & -8k - 2 \\
+        9 & 3 & 1 & -27k + 11
+    \end{amatrix}
+\]
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+We have $P(-1) = 0$, so
+\begin{align}
+    (-1 + 2)(k \times (-1) + a \times 1 + b \times (-1) + c) + (-7 \times (-1) + 22) &= 0 \notag \\
+    a - b + c &= k - 29.
+\end{align}
+Similarly, $P(2) = 0$, so
+\begin{align}
+    (2 + 2)(k \times 8 + a \times 4 + b \times 2 + c) + (-7 \times 2 + 22) &= 0 \notag \\
+    16a + 8b + 4c &= -32k - 8 \notag \\
+    4a + 2b + c &= -8k - 2.
+\end{align}
+But since $P(3) = 56$ we get
+\begin{align}
+    (3 + 2)(k \times 27 + a \times 9 + b \times 3 + c) + (-7 \times 3 + 22) &= 56 \notag \\
+    \cancel{5 \times} (k \times 27 + a \times 9 + b \times 3 + c) &= \cancel{5 \times} 11 \notag \\
+    9a + 3b + c &= -27k + 11.
+\end{align}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[4]
+Clearly showing all row operations, show that
+\[
+    a = -4k + 1, \qquad b = k + 8, \qquad c = 6k - 22.
+\]
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[4.5in]
+By Gaussian elimination
+\begin{align*}
+	\begin{amatrix}{3}
+        1 & -1 & 1 & k - 29 \\
+        4 & 2 & 1 & -8k - 2 \\
+        9 & 3 & 1 & -27k + 11
+    \end{amatrix}
+    &\sim
+	\begin{amatrix}{3}
+        1 & -1 & 1 & k - 29 \\
+        0 & -6 & 3 & 12k - 114 \\
+        0 & -12 & 8 & 36k - 272
+    \end{amatrix}
+    &&
+    \begin{array}{l}
+ 	    \\
+	    R_2 \to 4R_1 - R_2 \\
+	    R_3 \to 9R_1 - R_3 
+    \end{array} \\
+%     &\sim
+% 	\begin{amatrix}{3}
+%         1 & -1 & 1 & k - 29 \\
+%         0 & 1 & -\frac{1}{2} & -2k + 19 \\
+%         0 & 3 & -2 & -9k + 68
+%     \end{amatrix}
+%     &&
+%     \begin{array}{l}
+%  	    \\
+% 	    R_2 \to -\frac{1}{6}R_2 \\
+% 	    R_3 \to -\frac{1}{4}R_3
+%     \end{array} \\
+    &\sim
+	\begin{amatrix}{3}
+        1 & -1 & 1 & k - 29 \\
+        0 & 1 & -\frac{1}{2} & -2k + 19 \\
+        0 & 0 & 1 & 6k - 22
+    \end{amatrix}
+    &&
+    \begin{array}{l}
+ 	    \\
+ 	    R_2 \to -\frac{1}{6} R_2 \\
+	    R_3 \to 6R_2 - 2R_3
+    \end{array} \\
+    &\sim
+	\begin{amatrix}{3}
+        1 & 0 & \frac{1}{2} & -k - 10 \\
+        0 & 2 & 0 & 2k + 16 \\
+        0 & 0 & 1 & 6k - 22
+    \end{amatrix}
+    &&
+    \begin{array}{l}
+ 	    R_1 \to R_1 + R_2 \\
+	    R_2 \to 2R_2 + R_3 \\
+	    \\
+    \end{array} \\
+    &\sim
+	\begin{amatrix}{3}
+        2 & 0 & 0 & -8k + 2 \\
+        0 & 1 & 0 & k + 8 \\
+        0 & 0 & 1 & 6k - 22
+    \end{amatrix}
+    &&
+    \begin{array}{l}
+ 	    R_1 \to 2R_1 - R_3 \\
+	    R_2 \to \frac{1}{2}R_2 \\
+	    \\
+    \end{array} \\
+    &\sim
+	\begin{amatrix}{3}
+        1 & 0 & 0 & -4k + 1 \\
+        0 & 1 & 0 & k + 8 \\
+        0 & 0 & 1 & 6k - 22
+    \end{amatrix}
+    &&
+    \begin{array}{l}
+ 	    R_1 \to \frac{1}{2}R_1 \\
+	    \\
+	    \\
+    \end{array}
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[1]
+Hence, find $P(x)$ for $k = 2$. (There's no need to simplify $P(x)$.)
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+If $k = 2$, then
+\[
+    a = -7, \qquad b = 10, \qquad c = -10.
+\]
+Thus,
+\[
+    P(x) = (x + 2)(2x^3 - 7x^2 + 10x - 10) + (-7x + 22).
+\]
+(For what it's worth, $P(x) = 2x^4 - 3x^3 - 4x^2 + 3x + 2$.)
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

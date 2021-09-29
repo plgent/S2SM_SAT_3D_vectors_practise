@@ -1,0 +1,116 @@
+\question % 2005 Exam, Q5.
+Figure~\ref{fig:proof-of-parallel-lines} shows triangle $OAB$ with vectors $\vv{OA} = \vec{a}$ and $\vv{OB} = \vec{b}$. Points $X$ and $Y$ lie on $OB$ and $AB$ such that $OX = 4XB$ and $AY = 4YB$.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 5/.8/A, 3/4/B}
+    \tkzDefPointWith[colinear=at O,K=0.8](O,B)
+    \tkzGetPoint{X}
+    \tkzDefPointWith[colinear=at A,K=0.8](A,B)
+    \tkzGetPoint{Y}
+    \tkzDrawPolygon(O,A,B)
+    \tkzDrawSegment(X,Y)
+    \tkzLabelPoints[below left](O)
+    \tkzLabelPoints(A)
+    \tkzLabelPoints[above right](B)
+    \tkzLabelPoints[left](X)
+    \tkzLabelPoints[right](Y)
+    \ifprintanswers
+    \tkzDrawSegment[vector,red](O,A)
+    \tkzDrawSegment[vector,red](O,B)
+    \tkzLabelSegment[below,red](O,A){$\vec{a}$}
+    \tkzLabelSegment[left,red](O,B){$\vec{b}$}
+    \else
+    \fi
+    \end{tikzpicture}
+    \caption{The area of these two triangles will be compared.}
+    \label{fig:proof-of-parallel-lines}
+\end{figure}
+
+\begin{parts}
+
+\part
+Find in terms of $\vec{a}$ and $\vec{b}$ the vectors:
+
+\begin{subparts}
+
+\subpart[1]
+$\vv{AB}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+We have
+\[
+    \vv{AB} = \vec{b} - \vec{a}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[1]
+$\vv{OX}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+We have
+\[
+    \vv{OX} = \frac{4}{5}\vec{b}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{subparts}
+
+\part[2]
+Use a vector proof to show that $XY$ is parallel to $OA$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+\begin{proof}
+By part (a)
+\begin{align*}
+    \vv{XY} &= -\vv{OX} + \vv{OA} + \frac{4}{5}\vv{AB} \\
+    &= -\frac{4}{5}\vec{b} + \vec{a} + \frac{4}{5}(\vec{b} - \vec{a}) \\
+    &= \frac{1}{5}\vec{a},
+\end{align*}
+which is a scalar multiple of $\vec{a}$.
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part
+If $\abs{\vec{a} \times \vec{b}} = 4$, find the area of:
+
+\begin{subparts}
+
+\subpart[1]
+triangle $OAB$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+The area of triangle $OAB$ is
+\[
+    \frac{1}{2}\abs{\vec{a} \times \vec{b}} = 2 \, \textrm{units}^2.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[2]
+triangle $XYB$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+The area of a triangle is $\frac{1}{2}ab\sin(\gamma)$. Triangles $OAB$ and $XYB$ are similar so
+\[
+    \angle{BOA} = \gamma = \angle{BXY}.
+\]
+The side lengths are $\frac{1}{5}$ of what they were before, so triangle $XYB$ has area
+\[
+    \frac{1}{5} \times \frac{1}{5} \times 2 = \frac{2}{25} \, \textrm{units}^2.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{subparts}
+
+\end{parts}

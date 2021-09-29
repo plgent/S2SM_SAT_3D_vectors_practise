@@ -1,0 +1,104 @@
+\documentclass[
+    a4paper,
+    12pt,
+    addpoints,
+    % answers,
+    noanswers,
+    hidelinks,
+]
+{exam}
+
+%%% Packages and macros
+
+\usepackage{1-preamble}
+
+%%% Page layout
+
+\input{2-layout}
+
+%%% Subject, paper and conditions
+
+\newcommand{\subject}{Stage 2 Specialist Mathematics}
+\newcommand{\papername}{SAT: 3D Vectors (Practise)}
+\newcommand{\papernameshort}{3D Vectors (Practise)}
+\newcommand{\timelimit}{$\infty$~Minutes}
+\newcommand{\conditions}{Notes, Calculator}
+\newcommand{\paperrules}{\timelimit, \conditions}
+
+\begin{document}
+
+% \input{3-cover-letter}
+
+\begin{questions}
+
+\input{5-vector-proof-two-triangles}
+
+\threeast
+
+\input{5-intersection-of-two-lines}
+
+\threeast
+
+\input{5-vector-proof-area-of-triangle}
+
+\triast
+
+\uplevel{
+\begin{proposition}[Dot product of vector sum with itself]
+\label{prop:dot-product-of-vector-sum-with-itself}
+Let $\vec{u}$ and $\vec{v}$ be vectors. Then
+\[
+    (\vec{u} + \vec{v}) \cdot (\vec{u} + \vec{v}) = \abs{\vec{u} + \vec{v}}^2.
+\]
+\end{proposition}
+}
+
+\input{5-properties-of-dot-product}
+
+\threeast
+
+\input{5-parallelogram-in-three-dimensions}
+
+\threeast
+
+\input{5-polynomials-augmented-matrix}
+
+\threeast
+
+\input{5-line-parallel-to-plane}
+
+\ifprintanswers
+\threeast
+\else
+\fi
+
+\input{5-intersection-of-two-lines-unguided}
+
+\threeast
+
+\input{5-angle-between-two-vectors}
+
+\ifprintanswers
+\triast
+\else
+\fi
+
+\begin{theorem}[Shortest distance between skew lines]
+\label{thm:shortest-distance-between-skew-lines}
+Let $\ell_1$ and $\ell_2$ be two skew lines. Let $\vec{u}$ be a direction vector of $\ell_1$ and let point $A$ be on $\ell_1$. Let $\vec{v}$ be a direction vector of $\ell_2$ and let point $B$ be on $\ell_2$. Then the shortest distance between $\ell_1$ and $\ell_2$ is
+\[
+    \frac{\abs{\vv{AB} \cdot \vec{u} \times \vec{v}}}{\abs{\vec{u} \times \vec{v}}}.
+\]
+\end{theorem}
+
+\input{5-skew-lines}
+
+\end{questions}
+
+\vfill
+
+\input{8-grading-table}
+
+\input{9-formulae-sheet}
+
+\end{document}

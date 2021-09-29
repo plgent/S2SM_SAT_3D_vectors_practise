@@ -1,0 +1,71 @@
+\question % HL (Core) - Third Edition, RS 15C, Q14.
+Let $t$ be a real number and let
+\[
+	\ell_1 : \frac{x - 3}{2} = y - 4 = \frac{z + 1}{-2}
+	\qquad
+	\ell_2 :
+	\begin{cases}
+		x(t) = -1 + 3t \\
+		y(t) = 2 + 2t \\
+		z(t) = 3 - t
+	\end{cases}
+\]
+be two lines.
+
+\begin{parts}
+
+\part[1]
+Find direction vectors for both lines.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[.75in]
+Direction vectors are
+\[
+	\vec{d}_1 = \colvec{3}{2}{1}{-2}, \qquad \vec{d}_2 = \colvec{3}{3}{2}{-1}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[1]
+Hence, show that the two lines are not parallel.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+Let $k$ be a real number. Since
+\[
+    \vec{d}_1 \neq k \vec{d}_2
+\]
+the lines aren't parallel.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[3]
+Find the point of intersection $P$ of $\ell_1$ and $\ell_2$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2in]
+For real numbers $s$ and $t$
+\[
+	\ell_1 :
+	\begin{cases}
+		x(s) = 3 + 2s \\
+		y(s) = 4 + s \\
+		z(s) = -1 - 2s
+	\end{cases},
+	\qquad
+	\ell_2 :
+	\begin{cases}
+		x(t) = -1 + 3t \\
+		y(t) = 2 + 2t \\
+		z(t) = 3 - t.
+	\end{cases}
+\]
+By solving for $s$, we get
+\[
+	s = \frac{-1 + 3t - 3}{2} = 2 + 2t - 4 = \frac{3 - t + 1}{-2}.
+\]
+This is true for $t = 0$. So the point is $P(-1, 2, 3)$.
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{parts}

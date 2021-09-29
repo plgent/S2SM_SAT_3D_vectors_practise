@@ -1,0 +1,103 @@
+\question % 2013 Exam, Q6.
+Let $\vec{a} = \colvec{3}{1}{2}{-4}$ and $\vec{b} = \colvec{3}{5}{-3}{-2}$ be vectors.
+
+\begin{parts}
+
+\part
+
+\begin{subparts}
+
+\subpart[1]
+Find $\abs{\vec{a}}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+We have
+\[
+    \abs{\vec{a}} = \sqrt{1^2 + 2^2 + (-4)^2} = \sqrt{21}.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[1]
+Find $\vec{a} \cdot \vec{b}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1in]
+We have
+\[
+    \vec{a} \cdot \vec{b} = 1 \times 5 + 2 \times (-3) + (-4) \times (-2) = 7.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[2]
+Verify that $\abs{\vec{a} + \vec{b}}^2 = \abs{\vec{a}}^2 + \abs{\vec{b}}^2 + 2\vec{a} \cdot \vec{b}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2.5in]
+The LHS is
+\[
+    (\sqrt{6^2 + (-1)^2 + (-6)^2})^2 = 73,
+\]
+and, by parts (a)(i) and (ii), the RHS is
+\[
+    (\sqrt{21})^2 + (\sqrt{38})^2 + 2 \times 7 = 73.
+\]
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{subparts}
+
+\part[2]
+Use Proposition~\ref{prop:dot-product-of-vector-sum-with-itself} to show that $\abs{\vec{u} + \vec{v}}^2 = \abs{\vec{u}}^2 + \abs{\vec{v}}^2 + 2\vec{u} \cdot \vec{v}$ for \emph{all} vectors $\vec{u}$ and $\vec{v}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[2.5in]
+\begin{proof}
+Let $\vec{u}$ and $\vec{v}$ be vectors. By Proposition~\ref{prop:dot-product-of-vector-sum-with-itself}
+\begin{align*}
+    \abs{\vec{u} + \vec{v}}^2 &= (\vec{u} + \vec{v}) \cdot (\vec{u} + \vec{v}) \\
+    &= \vec{u} \cdot \vec{u} + \vec{u} \cdot \vec{v} + \vec{v} \cdot \vec{u} + \vec{v} \cdot \vec{v} \\
+    &= \abs{\vec{u}}^2 + \abs{\vec{v}}^2 + 2\vec{u} \cdot \vec{v}.
+\end{align*}
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part
+If $\abs{\vec{u}} = 10$, $\abs{\vec{v}} = 5$ and $\vec{u} \cdot \vec{v} = 25$, find:
+
+\begin{subparts}
+
+\subpart[1]
+$\abs{\vec{u} + \vec{v}}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+By part (b)
+\begin{align*}
+    \abs{\vec{u} + \vec{v}} &= \sqrt{\abs{\vec{u}}^2 + \abs{\vec{v}}^2 + 2\vec{u} \cdot \vec{v}} && (\abs{\vec{u} + \vec{v}} \geq 0) \\
+    &= \sqrt{10^2 + 5^2 + 2 \times 25} \\
+    &= 5\sqrt{7}.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\subpart[1]
+$\abs{\vec{u} - \vec{v}}$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+Similarly,
+\begin{align*}
+    \abs{\vec{u} - \vec{v}} &= \sqrt{\abs{\vec{u}}^2 + \abs{\vec{v}}^2 - 2\vec{u} \cdot \vec{v}} && (\abs{\vec{u} - \vec{v}} \geq 0) \\
+    &= \sqrt{10^2 + 5^2 - 2 \times 25} \\
+    &= 5\sqrt{3}.
+\end{align*}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\end{subparts}
+
+\end{parts}

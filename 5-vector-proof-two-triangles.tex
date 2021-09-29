@@ -1,0 +1,69 @@
+\question % 2010 Exam, Q8.
+Consider the equilateral triangle $ABC$ shown in Figure~\ref{fig:equilateral-triangle-with-vectors}. Let $\vv{AC} = \vec{c}$ and let $\vv{AB} = \vec{b}$.
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[scale=.75]
+	\ifprintanswers
+	\tkzDefPoints{0/0/A, 4/0/B}
+	\tkzDefTriangle[equilateral](A,B)
+	\tkzGetPoint{C}
+	\tkzDrawPolygon[semithick](A,B,C)
+	\tkzLabelPoints[left](A)
+	\tkzLabelPoints[right](B)
+	\tkzLabelPoints[above](C)
+	\tkzDefPointWith[colinear=at B,K=2](C,A)
+	\tkzGetPoint{D}
+	\tkzLabelPoints[red](D)
+	\tkzDrawSegment[vector,red](A,C)
+	\tkzDrawSegment[vector,red](A,B)
+	\tkzDrawSegment[vector,red](B,D)
+	\tkzDrawSegment[vector,gray](A,D)
+	\tkzLabelSegment[left,red](A,C){$\vec{c}$}
+	\tkzLabelSegment[below,red](A,B){$\vec{b}$}
+	\tkzLabelSegment[red](B,D){$-2\vec{c}$}
+	\tkzLabelSegment[gray,left](A,D){$\vec{b} - 2\vec{c}$}
+	\tkzMarkRightAngle(D,A,B)
+	\else
+	\tkzDefPoints{0/0/A, 4/0/B}
+	\tkzDefTriangle[equilateral](A,B)
+	\tkzGetPoint{C}
+	\tkzDrawPolygon[semithick](A,B,C)
+	\tkzLabelPoints[left](A)
+	\tkzLabelPoints[right](B)
+	\tkzLabelPoints[above](C)
+	\tkzDefPointWith[colinear=at B,K=2](C,A)
+	\tkzGetPoint{D}
+	\tkzDrawSegment[vector,red,opacity=0](B,D)
+	\fi
+	\end{tikzpicture}
+	\caption{An equilateral triangle.}
+	\label{fig:equilateral-triangle-with-vectors}
+\end{figure}
+
+\begin{parts}
+
+\part[1]
+Draw the vector $\vv{BD} = -2\vec{c}$ on Figure~\ref{fig:equilateral-triangle-with-vectors}.
+
+\part[3]
+Prove that $\vec{b} \cdot (\vec{b} - 2\vec{c}) = 0$.
+
+\begin{EnvFullwidth}
+\begin{solutionorgrid}[1.5in]
+\begin{proof}
+We have
+\begin{align*}
+    \vec{b} \cdot (\vec{b} - 2\vec{c}) &= \vec{b} \cdot \vec{b} - 2\vec{b} \cdot \vec{c} \\
+    &= \abs{\vec{b}}^2 - \cancel{2}\abs{\vec{b}}\abs{\vec{c}}\cancel{\cos(\ang{60})} \\
+    &= \abs{\vec{b}}^2 - \abs{\vec{b}}\abs{\vec{b}} && (\abs{\vec{c}} = \abs{\vec{b}}) \\
+    &= 0.
+\end{align*}
+\end{proof}
+\end{solutionorgrid}
+\end{EnvFullwidth}
+
+\part[2]
+Illustrate the result from part (b).
+
+\end{parts}
